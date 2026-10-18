@@ -141,22 +141,35 @@ for k, v in ALIASES.items():
     CANONICAL_MAP[k.lower()] = v
 
 SUFFIX_RE = re.compile(
-    r"(?:\s*,\s*|\s+)(?:co\.?,\s*ltd\.?|co\.?|ltd\.?|inc\.?|corp(?:oration)?\.?|llc\.?|k\.k\.?)$",
+    r"(?:[\s,.]+|(?<=[a-z]))(?:co\.?,\s*ltd\.?|co\.?|ltd\.?|inc\.?|corp(?:oration)?\.?|llc\.?|k\.k\.?)$",
     re.IGNORECASE
 )
+
+
+def normalize_studio_key(name: str) -> str:
+    """Produces a clean alphanumeric key for clustering studio variants."""
+    if not name:
+        return ""
+    s = name.lower().strip()
+    s = SUFFIX_RE.sub("", s).strip()
+    s = re.sub(r"[\.,\-_/]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\b(studio|studios|animation|film|films|co|ltd|inc|corp)\b", "", s).strip()
+    s = re.sub(r"\s+", "", s)
+    return s
 
 
 def canonicalize_studio_name(name: str) -> str:
     """Canonicalizes studio names across AODB and MAL API variations."""
     if not name:
         return ""
-    cleaned = name.strip()
+    cleaned = name.strip().rstrip("., /").strip()
     lowered = cleaned.lower()
 
     if lowered in CANONICAL_MAP:
         return CANONICAL_MAP[lowered]
 
-    stripped = SUFFIX_RE.sub("", cleaned).strip().rstrip(",").strip()
+    stripped = SUFFIX_RE.sub("", cleaned).strip().rstrip("., /").strip()
     stripped_lowered = stripped.lower()
 
     if stripped_lowered in CANONICAL_MAP:
@@ -166,9 +179,15 @@ def canonicalize_studio_name(name: str) -> str:
         if len(can_low) > 4 and (can_low == stripped_lowered):
             return can_name
 
+    norm_key = normalize_studio_key(cleaned)
+    for can_name in MAL_STUDIO_NAMES:
+        if normalize_studio_key(can_name) == norm_key:
+            return can_name
+
     if cleaned.islower():
         return stripped.title()
     return stripped
+
 
 
 def get_headers(client_id: str) -> dict:
@@ -266,6 +285,8 @@ def init_database(conn: sqlite3.Connection):
             FOREIGN KEY (mal_id) REFERENCES anime_catalog(mal_id) ON DELETE CASCADE
         );
         CREATE INDEX IF NOT EXISTS idx_anime_studios_name ON anime_studios(studio_name COLLATE NOCASE);
+        CREATE INDEX IF NOT EXISTS idx_anime_studios_mal_id ON anime_studios(mal_id, studio_name COLLATE NOCASE);
+
 
         CREATE TABLE IF NOT EXISTS studios_summary (
             studio_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -606,7 +627,12 @@ def sync_mal_ranking(
             ON CONFLICT(mal_id) DO UPDATE SET
                 title = excluded.title,
                 english_title = COALESCE(excluded.english_title, anime_catalog.english_title),
-                synonyms_csv = CASE WHEN excluded.synonyms_csv != '' THEN excluded.synonyms_csv ELSE anime_catalog.synonyms_csv END,
+                synonyms_csv = CASE 
+                    WHEN anime_catalog.synonyms_csv IS NOT NULL AND anime_catalog.synonyms_csv != '' AND excluded.synonyms_csv != '' 
+                    THEN anime_catalog.synonyms_csv || '|' || excluded.synonyms_csv
+                    WHEN excluded.synonyms_csv != '' THEN excluded.synonyms_csv
+                    ELSE anime_catalog.synonyms_csv 
+                END,
                 image_url = COALESCE(excluded.image_url, anime_catalog.image_url),
                 score = COALESCE(excluded.score, anime_catalog.score),
                 scored_by = excluded.scored_by,
@@ -621,7 +647,12 @@ def sync_mal_ranking(
                 start_date_epoch = COALESCE(excluded.start_date_epoch, anime_catalog.start_date_epoch),
                 source_material = COALESCE(excluded.source_material, anime_catalog.source_material),
                 primary_studio = COALESCE(excluded.primary_studio, anime_catalog.primary_studio),
-                studios_csv = CASE WHEN excluded.studios_csv != '' THEN excluded.studios_csv ELSE anime_catalog.studios_csv END,
+                studios_csv = CASE 
+                    WHEN anime_catalog.studios_csv IS NOT NULL AND anime_catalog.studios_csv != '' AND excluded.studios_csv != '' 
+                    THEN anime_catalog.studios_csv || '|' || excluded.studios_csv
+                    WHEN excluded.studios_csv != '' THEN excluded.studios_csv
+                    ELSE anime_catalog.studios_csv 
+                END,
                 genres_csv = CASE WHEN excluded.genres_csv != '' THEN excluded.genres_csv ELSE anime_catalog.genres_csv END,
                 updated_at = excluded.updated_at
         """, upsert_batch)
@@ -645,6 +676,99 @@ def sync_mal_ranking(
 
     print(f"Completed sync for '{ranking_type}': {offset} items total.")
     return updated_items
+
+
+def cluster_and_canonicalize_studios(conn: sqlite3.Connection):
+    """
+    Normalizes and clusters similar studio names (e.g. 'Type Zero' vs 'Typezero',
+    'Assez Finaud Fabric.' vs 'Assez Finaud Fabric', 'Zero-G Room' vs 'Zero G Room').
+    Merges their rows in anime_studios and synchronizes anime_catalog.primary_studio and studios_csv.
+    """
+    print("Clustering and canonicalizing studio names...")
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT studio_name, COUNT(DISTINCT mal_id)
+        FROM anime_studios
+        WHERE studio_name IS NOT NULL AND TRIM(studio_name) != ''
+        GROUP BY studio_name COLLATE NOCASE;
+    """)
+    studios = cursor.fetchall()
+    if not studios:
+        return
+
+    clusters = {}
+    for name, count in studios:
+        key = normalize_studio_key(name)
+        if not key:
+            key = name.lower().strip()
+        clusters.setdefault(key, []).append((name, count))
+
+    # Identify remappings
+    remap = {}  # old_name -> canonical_name
+    canonical_lower_map = {n.lower(): n for n in MAL_STUDIO_NAMES}
+
+    for key, members in clusters.items():
+        if len(members) <= 1:
+            single_name = members[0][0]
+            clean_name = single_name.rstrip("., /").strip()
+            if clean_name != single_name and clean_name:
+                remap[single_name] = clean_name
+            continue
+
+        # Choose the best canonical name:
+        # 1. Prefer known MAL canonical name if present in cluster
+        chosen = None
+        for name, _ in members:
+            low = name.lower().strip()
+            if low in canonical_lower_map:
+                chosen = canonical_lower_map[low]
+                break
+
+        # 2. Prefer highest count, then longest clean title
+        if not chosen:
+            chosen = max(members, key=lambda x: (x[1], len(x[0])))[0]
+            chosen = chosen.rstrip("., /").strip()
+
+        for name, _ in members:
+            if name != chosen:
+                remap[name] = chosen
+
+    print(f"Consolidating {len(remap)} studio variants into canonical names...")
+
+    # Apply remapping in anime_studios
+    for old_name, new_name in remap.items():
+        cursor.execute("SELECT mal_id FROM anime_studios WHERE studio_name = ? COLLATE NOCASE;", (old_name,))
+        anime_ids = [row[0] for row in cursor.fetchall()]
+        if anime_ids:
+            cursor.executemany(
+                "INSERT OR IGNORE INTO anime_studios (studio_name, mal_id) VALUES (?, ?);",
+                [(new_name, aid) for aid in anime_ids]
+            )
+            cursor.execute("DELETE FROM anime_studios WHERE studio_name = ? COLLATE NOCASE;", (old_name,))
+        cursor.execute(
+            "UPDATE anime_catalog SET primary_studio = ? WHERE primary_studio = ? COLLATE NOCASE;",
+            (new_name, old_name)
+        )
+
+    # Fast sync of all co-studios into anime_catalog.studios_csv using temporary table
+    cursor.execute("DROP TABLE IF EXISTS temp_anime_studios;")
+    cursor.execute("""
+        CREATE TEMP TABLE temp_anime_studios AS
+        SELECT mal_id, GROUP_CONCAT(studio_name, '|') as all_studios
+        FROM (SELECT DISTINCT mal_id, studio_name FROM anime_studios ORDER BY studio_name)
+        GROUP BY mal_id;
+    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_temp_as_mal_id ON temp_anime_studios(mal_id);")
+    cursor.execute("""
+        UPDATE anime_catalog
+        SET studios_csv = (
+            SELECT all_studios FROM temp_anime_studios WHERE temp_anime_studios.mal_id = anime_catalog.mal_id
+        )
+        WHERE EXISTS (SELECT 1 FROM temp_anime_studios WHERE temp_anime_studios.mal_id = anime_catalog.mal_id);
+    """)
+    cursor.execute("DROP TABLE IF EXISTS temp_anime_studios;")
+    conn.commit()
+    print("Studio clustering and co-studio synchronization complete.")
 
 
 def build_studios_summary(conn: sqlite3.Connection):
@@ -673,20 +797,21 @@ def build_studios_summary(conn: sqlite3.Connection):
         HAVING COUNT(DISTINCT a.mal_id) >= 1;
     """)
 
-    # Populate top sample anime per studio for card previews
+    # Populate top sample anime per studio for card previews (up to 8 samples per studio for horizontal scroll)
     cursor.execute("""
-        SELECT studio_name FROM studios_summary WHERE popular_count > 0 ORDER BY popular_count DESC LIMIT 250;
+        SELECT studio_name FROM studios_summary ORDER BY popular_count DESC, total_count DESC;
     """)
-    top_studios = [row[0] for row in cursor.fetchall()]
+    all_studios = [row[0] for row in cursor.fetchall()]
 
-    for s_name in top_studios:
+    updates = []
+    for s_name in all_studios:
         cursor.execute("""
             SELECT a.mal_id, a.title, a.english_title, a.image_url, a.score, a.rank, a.popularity, a.status
             FROM anime_studios s
             JOIN anime_catalog a ON s.mal_id = a.mal_id
             WHERE s.studio_name = ? COLLATE NOCASE
             ORDER BY COALESCE(a.popularity, 999999) ASC
-            LIMIT 3;
+            LIMIT 8;
         """, (s_name,))
         samples = []
         for row in cursor.fetchall():
@@ -700,12 +825,15 @@ def build_studios_summary(conn: sqlite3.Connection):
                 "popularity": row[6],
                 "status": row[7],
             })
-        cursor.execute("""
-            UPDATE studios_summary SET sample_covers_json = ? WHERE studio_name = ? COLLATE NOCASE
-        """, (json.dumps(samples), s_name))
+        updates.append((json.dumps(samples), s_name))
+
+    cursor.executemany("""
+        UPDATE studios_summary SET sample_covers_json = ? WHERE studio_name = ? COLLATE NOCASE
+    """, updates)
 
     conn.commit()
-    print("studios_summary build complete.")
+    print(f"studios_summary build complete with sample covers for all {len(all_studios)} studios.")
+
 
 
 def compress_database(db_path: str, gz_path: str) -> tuple:
@@ -744,6 +872,7 @@ def run_full_build(client_id: str, repo_raw_url: str):
     sync_mal_ranking(conn, client_id, ranking_type="upcoming", max_pages=5, delay_sec=1.0)
 
     # 3. Aggregations & FTS5
+    cluster_and_canonicalize_studios(conn)
     build_studios_summary(conn)
     setup_fts5(conn)
 
@@ -860,6 +989,7 @@ def run_airing_update(client_id: str, repo_raw_url: str):
     delta_items = list(merged_items.values())
     now_epoch = int(time.time())
 
+    cluster_and_canonicalize_studios(conn)
     build_studios_summary(conn)
     setup_fts5(conn)
 
