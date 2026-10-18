@@ -42,11 +42,133 @@ FIELDS = (
     "num_scoring_users,media_type,status,num_episodes,start_season,source,studios,genres"
 )
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 DB_PATH = "mal_catalog.db"
 DB_GZ_PATH = "mal_catalog.db.gz"
 MANIFEST_PATH = "manifest.json"
 DELTA_PATH = "airing_delta.json"
+
+# Canonical MAL Studio Names and Aliases for Normalization
+MAL_STUDIO_NAMES = [
+    "MAPPA", "Madhouse", "Kyoto Animation", "Bones", "ufotable", "Wit Studio",
+    "A-1 Pictures", "CloverWorks", "Production I.G", "J.C.Staff", "Studio Pierrot",
+    "White Fox", "Trigger", "Shaft", "David Production", "Sunrise", "Studio Ghibli",
+    "TMS Entertainment", "Studio Deen", "P.A. Works", "Toei Animation", "Studio Bind",
+    "Science SARU", "Kinema Citrus", "8bit", "SILVER LINK.", "Lerche", "LIDENFILMS",
+    "Doga Kobo", "OLM", "feel.", "Brain's Base", "CoMix Wave Films", "Nexus",
+    "Passione", "Orange", "Gonzo", "Gainax", "Satelight", "Diomedéa", "Manglobe",
+    "TNK", "Artland", "Telecom Animation Film", "Shin-Ei Animation",
+    "Tatsunoko Production", "CygamesPictures", "Pierrot Films", "KONAMI animation"
+]
+
+CANONICAL_MAP = {}
+for name in MAL_STUDIO_NAMES:
+    CANONICAL_MAP[name.lower()] = name
+
+ALIASES = {
+    "a-1 pictures inc.": "A-1 Pictures",
+    "a1 pictures": "A-1 Pictures",
+    "cloverworks inc.": "CloverWorks",
+    "clover works": "CloverWorks",
+    "toei animation co., ltd.": "Toei Animation",
+    "toei animation co.,ltd.": "Toei Animation",
+    "j.c. staff": "J.C.Staff",
+    "j.c.staff co., ltd.": "J.C.Staff",
+    "j.c. staff co., ltd.": "J.C.Staff",
+    "production i.g": "Production I.G",
+    "production i.g.": "Production I.G",
+    "production i.g., inc.": "Production I.G",
+    "production ig": "Production I.G",
+    "pierrot": "Studio Pierrot",
+    "pierrot co., ltd.": "Studio Pierrot",
+    "studio pierrot": "Studio Pierrot",
+    "studio pierrot co., ltd.": "Studio Pierrot",
+    "pierrot films": "Pierrot Films",
+    "sunrise inc.": "Sunrise",
+    "madhouse inc.": "Madhouse",
+    "bones inc.": "Bones",
+    "bones film": "Bones",
+    "bones film inc.": "Bones",
+    "ufotable, inc.": "ufotable",
+    "ufotable inc.": "ufotable",
+    "wit studio, inc.": "Wit Studio",
+    "wit studio inc.": "Wit Studio",
+    "kyoto animation co., ltd.": "Kyoto Animation",
+    "mappa co., ltd.": "MAPPA",
+    "silver link": "SILVER LINK.",
+    "silver link.": "SILVER LINK.",
+    "silverlink": "SILVER LINK.",
+    "shin-ei animation co., ltd.": "Shin-Ei Animation",
+    "tms entertainment co., ltd.": "TMS Entertainment",
+    "tokyo movie shinsha": "TMS Entertainment",
+    "p.a.works": "P.A. Works",
+    "p.a. works co., ltd.": "P.A. Works",
+    "8-bit": "8bit",
+    "eight bit": "8bit",
+    "liden films": "LIDENFILMS",
+    "liden films inc.": "LIDENFILMS",
+    "lidenfilms": "LIDENFILMS",
+    "liden films kyoto studio": "LIDENFILMS",
+    "lidenfilms kyoto studio": "LIDENFILMS",
+    "dogakobo": "Doga Kobo",
+    "doga kobo inc.": "Doga Kobo",
+    "studio deen co., ltd.": "Studio Deen",
+    "tatsunoko prod.": "Tatsunoko Production",
+    "tatsunoko production co., ltd.": "Tatsunoko Production",
+    "telecom animation film co., ltd.": "Telecom Animation Film",
+    "kinema citrus co., ltd.": "Kinema Citrus",
+    "science saru inc.": "Science SARU",
+    "cygames pictures": "CygamesPictures",
+    "brains base": "Brain's Base",
+    "comix wave": "CoMix Wave Films",
+    "comix wave films inc.": "CoMix Wave Films",
+    "diomedea": "Diomedéa",
+    "white fox inc.": "White Fox",
+    "trigger inc.": "Trigger",
+    "shaft inc.": "Shaft",
+    "david production inc.": "David Production",
+    "olm, inc.": "OLM",
+    "olm inc.": "OLM",
+    "orange co., ltd.": "Orange",
+    "aic": "AIC",
+    "anime international co., inc.": "AIC",
+    "anime international co.": "AIC",
+    "nippon animation co., ltd.": "Nippon Animation",
+    "group tac co., ltd.": "Group TAC",
+}
+
+for k, v in ALIASES.items():
+    CANONICAL_MAP[k.lower()] = v
+
+SUFFIX_RE = re.compile(
+    r"(?:\s*,\s*|\s+)(?:co\.?,\s*ltd\.?|co\.?|ltd\.?|inc\.?|corp(?:oration)?\.?|llc\.?|k\.k\.?)$",
+    re.IGNORECASE
+)
+
+
+def canonicalize_studio_name(name: str) -> str:
+    """Canonicalizes studio names across AODB and MAL API variations."""
+    if not name:
+        return ""
+    cleaned = name.strip()
+    lowered = cleaned.lower()
+
+    if lowered in CANONICAL_MAP:
+        return CANONICAL_MAP[lowered]
+
+    stripped = SUFFIX_RE.sub("", cleaned).strip().rstrip(",").strip()
+    stripped_lowered = stripped.lower()
+
+    if stripped_lowered in CANONICAL_MAP:
+        return CANONICAL_MAP[stripped_lowered]
+
+    for can_low, can_name in CANONICAL_MAP.items():
+        if len(can_low) > 4 and (can_low == stripped_lowered):
+            return can_name
+
+    if cleaned.islower():
+        return stripped.title()
+    return stripped
 
 
 def get_headers(client_id: str) -> dict:
@@ -121,7 +243,7 @@ def init_database(conn: sqlite3.Connection):
             start_date_epoch INTEGER,
             source_material TEXT,
             country_of_origin TEXT,
-            primary_studio TEXT,
+            primary_studio TEXT COLLATE NOCASE,
             studios_csv TEXT,
             genres_csv TEXT,
             tags_csv TEXT,
@@ -138,16 +260,16 @@ def init_database(conn: sqlite3.Connection):
         CREATE INDEX IF NOT EXISTS idx_anime_anilist_id ON anime_catalog(anilist_id) WHERE anilist_id IS NOT NULL;
 
         CREATE TABLE IF NOT EXISTS anime_studios (
-            studio_name TEXT NOT NULL,
+            studio_name TEXT COLLATE NOCASE NOT NULL,
             mal_id INTEGER NOT NULL,
             PRIMARY KEY (studio_name, mal_id),
             FOREIGN KEY (mal_id) REFERENCES anime_catalog(mal_id) ON DELETE CASCADE
         );
-        CREATE INDEX IF NOT EXISTS idx_anime_studios_name ON anime_studios(studio_name);
+        CREATE INDEX IF NOT EXISTS idx_anime_studios_name ON anime_studios(studio_name COLLATE NOCASE);
 
         CREATE TABLE IF NOT EXISTS studios_summary (
             studio_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            studio_name TEXT UNIQUE NOT NULL,
+            studio_name TEXT COLLATE NOCASE UNIQUE NOT NULL,
             total_count INTEGER NOT NULL,
             popular_count INTEGER NOT NULL,
             airing_count INTEGER NOT NULL,
@@ -218,6 +340,7 @@ def ingest_anime_offline_database(conn: sqlite3.Connection):
 
     batch = []
     studios_batch = set()
+    relations_batch = set()
 
     for item in entries:
         sources = item.get("sources", [])
@@ -270,8 +393,9 @@ def ingest_anime_offline_database(conn: sqlite3.Connection):
         season_name = (season_info.get("season") or "").lower()
 
         studios = item.get("studios", [])
-        primary_studio = studios[0].strip() if studios else None
-        studios_csv = "|".join(st.strip() for st in studios if st.strip())
+        canonical_studios = [canonicalize_studio_name(st) for st in studios if st.strip()]
+        primary_studio = canonical_studios[0] if canonical_studios else None
+        studios_csv = "|".join(canonical_studios)
 
         tags = item.get("tags", [])
         tags_csv = "|".join(t.strip() for t in tags if t.strip())
@@ -284,10 +408,17 @@ def ingest_anime_offline_database(conn: sqlite3.Connection):
             primary_studio, studios_csv, tags_csv, now_epoch
         ))
 
-        for st in studios:
-            s_clean = st.strip()
-            if s_clean:
-                studios_batch.add((s_clean, mal_id))
+        for st in canonical_studios:
+            if st:
+                studios_batch.add((st, mal_id))
+
+        related_anime = item.get("relatedAnime", [])
+        for rel in related_anime:
+            m_rel = mal_id_regex.search(rel)
+            if m_rel:
+                target_mal_id = int(m_rel.group(1))
+                if target_mal_id != mal_id:
+                    relations_batch.add((mal_id, target_mal_id, "related"))
 
         if len(batch) >= 2000:
             cursor.executemany("""
@@ -349,8 +480,13 @@ def ingest_anime_offline_database(conn: sqlite3.Connection):
             INSERT OR IGNORE INTO anime_studios (studio_name, mal_id) VALUES (?, ?)
         """, list(studios_batch))
 
+    if relations_batch:
+        cursor.executemany("""
+            INSERT OR IGNORE INTO anime_relations (source_mal_id, target_mal_id, relation_type) VALUES (?, ?, ?)
+        """, list(relations_batch))
+
     conn.commit()
-    print("Base anime-offline-database ingestion complete.")
+    print(f"Base anime-offline-database ingestion complete with {len(relations_batch)} relations.")
 
 
 def sync_mal_ranking(
@@ -427,8 +563,8 @@ def sync_mal_ranking(
 
             source_material = node.get("source")
             studios_data = node.get("studios", [])
-            primary_studio = studios_data[0].get("name") if studios_data else None
-            studios_csv = "|".join(s.get("name", "").strip() for s in studios_data if s.get("name"))
+            primary_studio = canonicalize_studio_name(studios_data[0].get("name")) if studios_data else None
+            studios_csv = "|".join(canonicalize_studio_name(s.get("name", "")) for s in studios_data if s.get("name"))
 
             genres_data = node.get("genres", [])
             genres_csv = "|".join(g.get("name", "").strip() for g in genres_data if g.get("name"))
@@ -455,7 +591,7 @@ def sync_mal_ranking(
             })
 
             for s in studios_data:
-                s_name = s.get("name", "").strip()
+                s_name = canonicalize_studio_name(s.get("name", ""))
                 if s_name:
                     studios_batch.add((s_name, mal_id))
 
@@ -523,22 +659,23 @@ def build_studios_summary(conn: sqlite3.Connection):
             studio_name, total_count, popular_count, airing_count, upcoming_count, avg_score, sample_covers_json
         )
         SELECT 
-            s.studio_name,
-            COUNT(a.mal_id) as total_count,
-            COUNT(CASE WHEN a.popularity <= 5000 THEN 1 END) as popular_count,
-            COUNT(CASE WHEN a.status = 'currently_airing' THEN 1 END) as airing_count,
-            COUNT(CASE WHEN a.status = 'not_yet_aired' THEN 1 END) as upcoming_count,
+            s.studio_name COLLATE NOCASE,
+            COUNT(DISTINCT a.mal_id) as total_count,
+            COUNT(DISTINCT CASE WHEN a.popularity <= 5000 THEN a.mal_id END) as popular_count,
+            COUNT(DISTINCT CASE WHEN a.status = 'currently_airing' THEN a.mal_id END) as airing_count,
+            COUNT(DISTINCT CASE WHEN a.status = 'not_yet_aired' THEN a.mal_id END) as upcoming_count,
             AVG(CASE WHEN a.score > 0 THEN a.score END) as avg_score,
             '[]' as sample_covers_json
         FROM anime_studios s
         JOIN anime_catalog a ON s.mal_id = a.mal_id
-        GROUP BY s.studio_name
-        HAVING COUNT(a.mal_id) >= 1;
+        WHERE s.studio_name IS NOT NULL AND TRIM(s.studio_name) != ''
+        GROUP BY s.studio_name COLLATE NOCASE
+        HAVING COUNT(DISTINCT a.mal_id) >= 1;
     """)
 
-    # Populate top 3 sample anime per studio for card previews
+    # Populate top sample anime per studio for card previews
     cursor.execute("""
-        SELECT studio_name FROM studios_summary WHERE popular_count > 0 ORDER BY popular_count DESC LIMIT 200;
+        SELECT studio_name FROM studios_summary WHERE popular_count > 0 ORDER BY popular_count DESC LIMIT 250;
     """)
     top_studios = [row[0] for row in cursor.fetchall()]
 
@@ -547,7 +684,7 @@ def build_studios_summary(conn: sqlite3.Connection):
             SELECT a.mal_id, a.title, a.english_title, a.image_url, a.score, a.rank, a.popularity, a.status
             FROM anime_studios s
             JOIN anime_catalog a ON s.mal_id = a.mal_id
-            WHERE s.studio_name = ?
+            WHERE s.studio_name = ? COLLATE NOCASE
             ORDER BY COALESCE(a.popularity, 999999) ASC
             LIMIT 3;
         """, (s_name,))
@@ -564,7 +701,7 @@ def build_studios_summary(conn: sqlite3.Connection):
                 "status": row[7],
             })
         cursor.execute("""
-            UPDATE studios_summary SET sample_covers_json = ? WHERE studio_name = ?
+            UPDATE studios_summary SET sample_covers_json = ? WHERE studio_name = ? COLLATE NOCASE
         """, (json.dumps(samples), s_name))
 
     conn.commit()
@@ -600,6 +737,7 @@ def run_full_build(client_id: str, repo_raw_url: str):
     ingest_anime_offline_database(conn)
 
     # 2. MAL rankings
+    sync_mal_ranking(conn, client_id, ranking_type="airing", max_pages=5, delay_sec=1.0)
     sync_mal_ranking(conn, client_id, ranking_type="all", delay_sec=1.0)
     sync_mal_ranking(conn, client_id, ranking_type="bypopularity", max_pages=10, delay_sec=1.0)
     sync_mal_ranking(conn, client_id, ranking_type="favorite", max_pages=5, delay_sec=1.0)
@@ -680,7 +818,7 @@ def run_airing_update(client_id: str, repo_raw_url: str):
             print(f"Checking for existing DB at {remote_gz_url}...")
             try:
                 req = urllib.request.Request(remote_gz_url, headers={"User-Agent": USER_AGENT})
-                with urllib.request.urlopen(req, timeout=30) as resp:
+                with urllib.request.urlopen(req, timeout=60) as resp:
                     if resp.status == 200:
                         print("Downloading existing database from remote...")
                         with gzip.GzipFile(fileobj=resp) as gz_stream:
@@ -688,7 +826,25 @@ def run_airing_update(client_id: str, repo_raw_url: str):
                                 while chunk := gz_stream.read(1024 * 1024):
                                     f_out.write(chunk)
             except Exception as e:
-                print(f"No remote database found ({e}). Initializing fresh DB structure...")
+                print(f"Could not download existing database from remote ({e}).")
+
+    if os.path.exists(DB_PATH):
+        try:
+            test_conn = sqlite3.connect(DB_PATH)
+            c = test_conn.cursor()
+            c.execute("SELECT COUNT(*) FROM anime_catalog")
+            count_row = c.fetchone()
+            existing_count = count_row[0] if count_row else 0
+            test_conn.close()
+            if existing_count < 20000:
+                print(f"Existing database only has {existing_count} anime (< 20000). Falling back to full rebuild...")
+                return run_full_build(client_id, repo_raw_url)
+        except Exception as e:
+            print(f"Error checking existing database ({e}). Falling back to full rebuild...")
+            return run_full_build(client_id, repo_raw_url)
+    else:
+        print("No database available. Initiating full build...")
+        return run_full_build(client_id, repo_raw_url)
 
     conn = sqlite3.connect(DB_PATH)
     init_database(conn)
