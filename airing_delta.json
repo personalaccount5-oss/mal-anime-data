@@ -1,12 +1,12 @@
 {
-  "base_full_sync_epoch": 1792316809,
-  "delta_epoch": 1792316809,
+  "base_full_sync_epoch": 1792322924,
+  "delta_epoch": 1792322924,
   "items": [
     {
       "mal_id": 61469,
       "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
       "score": 9.05,
-      "scored_by": 111106,
+      "scored_by": 111117,
       "rank": 1,
       "popularity": 1171,
       "status": "currently_airing",
@@ -16,7 +16,7 @@
       "mal_id": 60636,
       "title": "Bleach: Sennen Kessen-hen - Kashin-tan",
       "score": 9,
-      "scored_by": 38905,
+      "scored_by": 38913,
       "rank": 2,
       "popularity": 1579,
       "status": "currently_airing",
@@ -26,7 +26,7 @@
       "mal_id": 61967,
       "title": "Black Clover 2nd Season",
       "score": 8.81,
-      "scored_by": 13064,
+      "scored_by": 13104,
       "rank": 3,
       "popularity": 1767,
       "status": "currently_airing",
@@ -36,7 +36,7 @@
       "mal_id": 21,
       "title": "One Piece",
       "score": 8.72,
-      "scored_by": 1563278,
+      "scored_by": 1563286,
       "rank": 4,
       "popularity": 17,
       "status": "currently_airing",
@@ -46,7 +46,7 @@
       "mal_id": 61987,
       "title": "Kusuriya no Hitorigoto 3rd Season",
       "score": 8.66,
-      "scored_by": 12336,
+      "scored_by": 12367,
       "rank": 5,
       "popularity": 1402,
       "status": "currently_airing",
@@ -55,8 +55,8 @@
     {
       "mal_id": 50250,
       "title": "Chiikawa",
-      "score": 8.63,
-      "scored_by": 8458,
+      "score": 8.62,
+      "scored_by": 8461,
       "rank": 6,
       "popularity": 4978,
       "status": "currently_airing",
@@ -66,7 +66,7 @@
       "mal_id": 61607,
       "title": "Shiguang Dailiren III",
       "score": 8.55,
-      "scored_by": 3370,
+      "scored_by": 3373,
       "rank": 7,
       "popularity": 4115,
       "status": "currently_airing",
@@ -106,9 +106,9 @@
       "mal_id": 64534,
       "title": "Koori no Jouheki 2nd Season",
       "score": 8.34,
-      "scored_by": 6564,
+      "scored_by": 6578,
       "rank": 11,
-      "popularity": 3212,
+      "popularity": 3210,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -126,7 +126,7 @@
       "mal_id": 59953,
       "title": "Mushen Ji",
       "score": 8.31,
-      "scored_by": 13240,
+      "scored_by": 13241,
       "rank": 13,
       "popularity": 6080,
       "status": "currently_airing",
@@ -136,17 +136,17 @@
       "mal_id": 63367,
       "title": "Dragon Ball Super: Beerus",
       "score": 8.3,
-      "scored_by": 3868,
+      "scored_by": 3876,
       "rank": 14,
-      "popularity": 3965,
+      "popularity": 3964,
       "status": "currently_airing",
       "episodes": 0
     },
     {
       "mal_id": 61603,
       "title": "Ao Ashi Season 2",
-      "score": 8.18,
-      "scored_by": 3001,
+      "score": 8.19,
+      "scored_by": 3018,
       "rank": 15,
       "popularity": 3866,
       "status": "currently_airing",
@@ -156,7 +156,7 @@
       "mal_id": 235,
       "title": "Meitantei Conan",
       "score": 8.18,
-      "scored_by": 171785,
+      "scored_by": 171787,
       "rank": 16,
       "popularity": 735,
       "status": "currently_airing",
@@ -166,9 +166,9 @@
       "mal_id": 61323,
       "title": "Ao no Hako Season 2",
       "score": 8.17,
-      "scored_by": 5786,
+      "scored_by": 5813,
       "rank": 17,
-      "popularity": 2499,
+      "popularity": 2498,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -178,7 +178,7 @@
       "score": 8.16,
       "scored_by": 330,
       "rank": 18,
-      "popularity": 14448,
+      "popularity": 14446,
       "status": "currently_airing",
       "episodes": 52
     },
@@ -186,7 +186,7 @@
       "mal_id": 44042,
       "title": "Holo no Graffiti",
       "score": 8.13,
-      "scored_by": 17856,
+      "scored_by": 17855,
       "rank": 19,
       "popularity": 3386,
       "status": "currently_airing",
@@ -196,9 +196,9 @@
       "mal_id": 65004,
       "title": "Yuanshen: Donghua Duanpian",
       "score": 8.08,
-      "scored_by": 4419,
+      "scored_by": 4418,
       "rank": 20,
-      "popularity": 7647,
+      "popularity": 7648,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -226,9 +226,9 @@
       "mal_id": 63801,
       "title": "Ranma \u00bd (2024) 3rd Season",
       "score": 7.92,
-      "scored_by": 3015,
+      "scored_by": 3029,
       "rank": 23,
-      "popularity": 4310,
+      "popularity": 4308,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -236,9 +236,9 @@
       "mal_id": 63293,
       "title": "Hotaru no Yomeiri",
       "score": 7.88,
-      "scored_by": 4933,
+      "scored_by": 4958,
       "rank": 24,
-      "popularity": 3030,
+      "popularity": 3027,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -286,7 +286,7 @@
       "mal_id": 59088,
       "title": "Tokyo Revengers: Santen Sensou-hen",
       "score": 7.78,
-      "scored_by": 4071,
+      "scored_by": 4082,
       "rank": 29,
       "popularity": 2840,
       "status": "currently_airing",
@@ -295,10 +295,10 @@
     {
       "mal_id": 64505,
       "title": "Diamond no Ace: Act II Second Season Part 2",
-      "score": 7.77,
-      "scored_by": 448,
+      "score": 7.76,
+      "scored_by": 450,
       "rank": 30,
-      "popularity": 7671,
+      "popularity": 7666,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -336,7 +336,7 @@
       "mal_id": 55315,
       "title": "Gensou Mangekyou: The Memories of Phantasm",
       "score": 7.64,
-      "scored_by": 3966,
+      "scored_by": 3965,
       "rank": 34,
       "popularity": 6909,
       "status": "currently_airing",
@@ -346,9 +346,9 @@
       "mal_id": 62484,
       "title": "Chitose-kun wa Ramune Bin no Naka Part 2",
       "score": 7.63,
-      "scored_by": 1258,
+      "scored_by": 1260,
       "rank": 35,
-      "popularity": 4873,
+      "popularity": 4872,
       "status": "currently_airing",
       "episodes": 11
     },
@@ -356,9 +356,9 @@
       "mal_id": 61578,
       "title": "Seitokai ni mo Ana wa Aru!",
       "score": 7.62,
-      "scored_by": 6076,
+      "scored_by": 6086,
       "rank": 36,
-      "popularity": 3267,
+      "popularity": 3266,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -378,7 +378,7 @@
       "score": 7.59,
       "scored_by": 1799,
       "rank": 38,
-      "popularity": 8550,
+      "popularity": 8551,
       "status": "currently_airing",
       "episodes": 720
     },
@@ -396,9 +396,9 @@
       "mal_id": 63382,
       "title": "Kyouran Reijou Nia Liston: Byoujaku Reijou ni Tensei shita Kamigoroshi no Bujin no Karei Naru Musouroku",
       "score": 7.56,
-      "scored_by": 3397,
+      "scored_by": 3413,
       "rank": 40,
-      "popularity": 4481,
+      "popularity": 4479,
       "status": "currently_airing",
       "episodes": 25
     },
@@ -406,7 +406,7 @@
       "mal_id": 53913,
       "title": "Tensei shitara Ken deshita II",
       "score": 7.56,
-      "scored_by": 4469,
+      "scored_by": 4473,
       "rank": 41,
       "popularity": 2274,
       "status": "currently_airing",
@@ -426,9 +426,9 @@
       "mal_id": 63140,
       "title": "Yasei no Last Boss ga Arawareta! 2nd Season",
       "score": 7.54,
-      "scored_by": 3606,
+      "scored_by": 3612,
       "rank": 43,
-      "popularity": 4308,
+      "popularity": 4307,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -436,9 +436,9 @@
       "mal_id": 63431,
       "title": "Tsuihou sareta Cheat Fuyo Majutsushi wa Kimama na Second Life wo Ouka suru. Ore wa Buki dake ja Naku, Arayuru Mono ni \"Kyouka Point\" wo Fuyo Dekiru shi, Ore no Ishi de Itsudemo Kouka wo Kaijo Dekiru kedo, Nokotta Hitotachi Daijoubu?",
       "score": 7.5,
-      "scored_by": 5197,
+      "scored_by": 5210,
       "rank": 44,
-      "popularity": 4098,
+      "popularity": 4095,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -446,9 +446,9 @@
       "mal_id": 64503,
       "title": "Yozakura-san Chi no Daisakusen 2nd Season Part 2",
       "score": 7.49,
-      "scored_by": 879,
+      "scored_by": 880,
       "rank": 45,
-      "popularity": 5741,
+      "popularity": 5739,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -466,9 +466,9 @@
       "mal_id": 64340,
       "title": "Tempal: Item no Chikara",
       "score": 7.45,
-      "scored_by": 6031,
+      "scored_by": 6042,
       "rank": 47,
-      "popularity": 3802,
+      "popularity": 3800,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -486,19 +486,19 @@
       "mal_id": 61014,
       "title": "Toaru Anbu no Item",
       "score": 7.44,
-      "scored_by": 1761,
+      "scored_by": 1771,
       "rank": 49,
-      "popularity": 5132,
+      "popularity": 5129,
       "status": "currently_airing",
       "episodes": 0
     },
     {
       "mal_id": 63409,
       "title": "Doumo, Suki na Hito ni Horegusuri wo Irai sareta Majo desu.",
-      "score": 7.42,
-      "scored_by": 3796,
+      "score": 7.41,
+      "scored_by": 3804,
       "rank": 50,
-      "popularity": 3918,
+      "popularity": 3915,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -506,9 +506,9 @@
       "mal_id": 60601,
       "title": "Tensei Kizoku, Kantei Skill de Nariagaru 3rd Season",
       "score": 7.42,
-      "scored_by": 3357,
+      "scored_by": 3359,
       "rank": 51,
-      "popularity": 3515,
+      "popularity": 3513,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -546,9 +546,9 @@
       "mal_id": 59204,
       "title": "Magic Knight Rayearth (2026)",
       "score": 7.33,
-      "scored_by": 1460,
+      "scored_by": 1462,
       "rank": 55,
-      "popularity": 5582,
+      "popularity": 5580,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -556,7 +556,7 @@
       "mal_id": 63181,
       "title": "Tougen Anki: Nikko Kegon no Taki-hen",
       "score": 7.33,
-      "scored_by": 1968,
+      "scored_by": 1970,
       "rank": 56,
       "popularity": 4611,
       "status": "currently_airing",
@@ -566,7 +566,7 @@
       "mal_id": 9874,
       "title": "Touhou Niji Sousaku Doujin Anime: Musou Kakyou",
       "score": 7.32,
-      "scored_by": 12737,
+      "scored_by": 12736,
       "rank": 57,
       "popularity": 4031,
       "status": "currently_airing",
@@ -586,9 +586,9 @@
       "mal_id": 59787,
       "title": "Romelia Senki",
       "score": 7.28,
-      "scored_by": 2876,
+      "scored_by": 2886,
       "rank": 59,
-      "popularity": 5012,
+      "popularity": 5009,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -613,24 +613,24 @@
       "episodes": 580
     },
     {
-      "mal_id": 58518,
-      "title": "Sasaki to Pii-chan Season 2",
-      "score": 7.25,
-      "scored_by": 1717,
-      "rank": 62,
-      "popularity": 4664,
-      "status": "currently_airing",
-      "episodes": 12
-    },
-    {
       "mal_id": 51768,
       "title": "Girigiri Warukunai Watame",
       "score": 7.24,
       "scored_by": 581,
-      "rank": 63,
-      "popularity": 13305,
+      "rank": 62,
+      "popularity": 13306,
       "status": "currently_airing",
       "episodes": 0
+    },
+    {
+      "mal_id": 58518,
+      "title": "Sasaki to Pii-chan Season 2",
+      "score": 7.25,
+      "scored_by": 1724,
+      "rank": 63,
+      "popularity": 4664,
+      "status": "currently_airing",
+      "episodes": 12
     },
     {
       "mal_id": 48956,
@@ -676,7 +676,7 @@
       "mal_id": 63337,
       "title": "FX Senshi Kurumi-chan",
       "score": 7.14,
-      "scored_by": 3303,
+      "scored_by": 3309,
       "rank": 68,
       "popularity": 4911,
       "status": "currently_airing",
@@ -686,9 +686,9 @@
       "mal_id": 57612,
       "title": "Kikansha no Mahou wa Tokubetsu desu 2nd Season",
       "score": 7.12,
-      "scored_by": 2205,
+      "scored_by": 2209,
       "rank": 69,
-      "popularity": 3443,
+      "popularity": 3441,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -716,9 +716,9 @@
       "mal_id": 61999,
       "title": "Shuiro no Kamen",
       "score": 7.1,
-      "scored_by": 1572,
+      "scored_by": 1581,
       "rank": 72,
-      "popularity": 5441,
+      "popularity": 5434,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -726,9 +726,9 @@
       "mal_id": 63098,
       "title": "Psyren",
       "score": 7.08,
-      "scored_by": 2682,
+      "scored_by": 2684,
       "rank": 73,
-      "popularity": 4781,
+      "popularity": 4780,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -736,9 +736,9 @@
       "mal_id": 63061,
       "title": "Uchi no Otouto-domo ga Sumimasen",
       "score": 7.07,
-      "scored_by": 3796,
+      "scored_by": 3800,
       "rank": 74,
-      "popularity": 5356,
+      "popularity": 5355,
       "status": "currently_airing",
       "episodes": 24
     },
@@ -746,9 +746,9 @@
       "mal_id": 62753,
       "title": "Yowaki Max Reijou nanoni, Ratsuwan Konyakusha-sama no Kake ni Notte Shimatta",
       "score": 7.03,
-      "scored_by": 1942,
+      "scored_by": 1944,
       "rank": 75,
-      "popularity": 5469,
+      "popularity": 5468,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -756,9 +756,9 @@
       "mal_id": 61153,
       "title": "Tensei shita Daiseijo wa, Seijo de Aru Koto wo Hitakakusu",
       "score": 6.99,
-      "scored_by": 2722,
+      "scored_by": 2733,
       "rank": 76,
-      "popularity": 4859,
+      "popularity": 4858,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -766,9 +766,9 @@
       "mal_id": 64084,
       "title": "Sekai Saikyou no Majo, Hajimemashita",
       "score": 6.96,
-      "scored_by": 2166,
+      "scored_by": 2169,
       "rank": 77,
-      "popularity": 5590,
+      "popularity": 5583,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -786,7 +786,7 @@
       "mal_id": 62590,
       "title": "Hotel Inhumans 2nd Season",
       "score": 6.94,
-      "scored_by": 460,
+      "scored_by": 461,
       "rank": 79,
       "popularity": 8405,
       "status": "currently_airing",
@@ -796,9 +796,9 @@
       "mal_id": 56733,
       "title": "Magical\u2605Explorer",
       "score": 6.89,
-      "scored_by": 3190,
+      "scored_by": 3197,
       "rank": 80,
-      "popularity": 4849,
+      "popularity": 4843,
       "status": "currently_airing",
       "episodes": 13
     },
@@ -806,9 +806,9 @@
       "mal_id": 60948,
       "title": "Mezametara Saikyou Soubi to Uchuusenmochi Datta node, Ikkodate Mezashite Youhei toshite Jiyuu ni Ikitai",
       "score": 6.89,
-      "scored_by": 3005,
+      "scored_by": 3013,
       "rank": 81,
-      "popularity": 4772,
+      "popularity": 4768,
       "status": "currently_airing",
       "episodes": 13
     },
@@ -816,9 +816,9 @@
       "mal_id": 63754,
       "title": "Shiotaiou no Satou-san ga Ore ni dake Amai",
       "score": 6.89,
-      "scored_by": 2733,
+      "scored_by": 2736,
       "rank": 82,
-      "popularity": 4897,
+      "popularity": 4894,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -858,7 +858,7 @@
       "score": 6.84,
       "scored_by": 2124,
       "rank": 86,
-      "popularity": 8210,
+      "popularity": 8209,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -883,14 +883,14 @@
       "episodes": 0
     },
     {
-      "mal_id": 59741,
-      "title": "Tsuihou sareta Tensei Juukishi wa Game Chishiki de Musou suru",
+      "mal_id": 62696,
+      "title": "Choujun! Choujou-senpai",
       "score": 6.82,
-      "scored_by": 20617,
+      "scored_by": 1161,
       "rank": 89,
-      "popularity": 2417,
+      "popularity": 7406,
       "status": "currently_airing",
-      "episodes": 26
+      "episodes": 0
     },
     {
       "mal_id": 41880,
@@ -903,14 +903,14 @@
       "episodes": 0
     },
     {
-      "mal_id": 62696,
-      "title": "Choujun! Choujou-senpai",
+      "mal_id": 59741,
+      "title": "Tsuihou sareta Tensei Juukishi wa Game Chishiki de Musou suru",
       "score": 6.82,
-      "scored_by": 1161,
+      "scored_by": 20623,
       "rank": 91,
-      "popularity": 7406,
+      "popularity": 2417,
       "status": "currently_airing",
-      "episodes": 0
+      "episodes": 26
     },
     {
       "mal_id": 1960,
@@ -926,9 +926,9 @@
       "mal_id": 63712,
       "title": "Tensei Goblin dakedo Shitsumon Aru?",
       "score": 6.79,
-      "scored_by": 2865,
+      "scored_by": 2873,
       "rank": 93,
-      "popularity": 5315,
+      "popularity": 5311,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -938,7 +938,7 @@
       "score": 6.75,
       "scored_by": 113,
       "rank": 94,
-      "popularity": 14201,
+      "popularity": 14196,
       "status": "currently_airing",
       "episodes": 16
     },
@@ -956,9 +956,9 @@
       "mal_id": 61140,
       "title": "Gensou Suikoden",
       "score": 6.72,
-      "scored_by": 942,
+      "scored_by": 943,
       "rank": 96,
-      "popularity": 7160,
+      "popularity": 7158,
       "status": "currently_airing",
       "episodes": 23
     },
@@ -966,7 +966,7 @@
       "mal_id": 62524,
       "title": "#Zombie Sagashitemasu",
       "score": 6.69,
-      "scored_by": 1794,
+      "scored_by": 1800,
       "rank": 97,
       "popularity": 6001,
       "status": "currently_airing",
@@ -978,7 +978,7 @@
       "score": 6.68,
       "scored_by": 628,
       "rank": 98,
-      "popularity": 6531,
+      "popularity": 6530,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -988,7 +988,7 @@
       "score": 6.67,
       "scored_by": 527,
       "rank": 99,
-      "popularity": 9545,
+      "popularity": 9546,
       "status": "currently_airing",
       "episodes": 3
     },
@@ -1008,7 +1008,7 @@
       "score": 6.64,
       "scored_by": 149,
       "rank": 101,
-      "popularity": 12698,
+      "popularity": 12697,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1016,9 +1016,9 @@
       "mal_id": 63292,
       "title": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
       "score": 6.63,
-      "scored_by": 1470,
+      "scored_by": 1475,
       "rank": 102,
-      "popularity": 5654,
+      "popularity": 5652,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1026,9 +1026,9 @@
       "mal_id": 64254,
       "title": "Hyouken no Majutsushi ga Sekai wo Suberu II",
       "score": 6.62,
-      "scored_by": 1717,
+      "scored_by": 1721,
       "rank": 103,
-      "popularity": 4751,
+      "popularity": 4750,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -1038,7 +1038,7 @@
       "score": 6.62,
       "scored_by": 686,
       "rank": 104,
-      "popularity": 8273,
+      "popularity": 8270,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -1046,7 +1046,7 @@
       "mal_id": 62907,
       "title": "Ojisan wa Kawaii Mono ga Osuki.",
       "score": 6.59,
-      "scored_by": 947,
+      "scored_by": 949,
       "rank": 105,
       "popularity": 7484,
       "status": "currently_airing",
@@ -1058,7 +1058,7 @@
       "score": 6.58,
       "scored_by": 640,
       "rank": 106,
-      "popularity": 10838,
+      "popularity": 10839,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1068,7 +1068,7 @@
       "score": 6.56,
       "scored_by": 304,
       "rank": 107,
-      "popularity": 9173,
+      "popularity": 9172,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1088,7 +1088,7 @@
       "score": 6.52,
       "scored_by": 202,
       "rank": 109,
-      "popularity": 14256,
+      "popularity": 14258,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1118,7 +1118,7 @@
       "score": 6.46,
       "scored_by": 898,
       "rank": 112,
-      "popularity": 7533,
+      "popularity": 7530,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1148,7 +1148,7 @@
       "score": 6.43,
       "scored_by": 415,
       "rank": 115,
-      "popularity": 9986,
+      "popularity": 9985,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1158,7 +1158,7 @@
       "score": 6.42,
       "scored_by": 1172,
       "rank": 116,
-      "popularity": 6752,
+      "popularity": 6749,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1168,7 +1168,7 @@
       "score": 6.36,
       "scored_by": 927,
       "rank": 117,
-      "popularity": 7654,
+      "popularity": 7652,
       "status": "currently_airing",
       "episodes": 20
     },
@@ -1188,7 +1188,7 @@
       "score": 6.34,
       "scored_by": 285,
       "rank": 119,
-      "popularity": 11378,
+      "popularity": 11376,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1196,9 +1196,9 @@
       "mal_id": 62922,
       "title": "Kashita Maryoku wa \"Revo Barai\" de Kyousei Choushuu",
       "score": 6.24,
-      "scored_by": 2819,
+      "scored_by": 2832,
       "rank": 120,
-      "popularity": 5105,
+      "popularity": 5096,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1238,7 +1238,7 @@
       "score": 6.04,
       "scored_by": 255,
       "rank": 124,
-      "popularity": 10847,
+      "popularity": 10844,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1255,10 +1255,10 @@
     {
       "mal_id": 59415,
       "title": "Dark Machine: The Animation",
-      "score": 5.99,
-      "scored_by": 356,
+      "score": 5.97,
+      "scored_by": 358,
       "rank": 126,
-      "popularity": 9902,
+      "popularity": 9900,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1276,9 +1276,9 @@
       "mal_id": 63053,
       "title": "Kyoufu Collector",
       "score": 5.87,
-      "scored_by": 595,
+      "scored_by": 596,
       "rank": 128,
-      "popularity": 8866,
+      "popularity": 8860,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -1296,9 +1296,9 @@
       "mal_id": 63764,
       "title": "Vertex Force",
       "score": 5.8,
-      "scored_by": 819,
+      "scored_by": 820,
       "rank": 130,
-      "popularity": 8500,
+      "popularity": 8495,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1308,7 +1308,7 @@
       "score": 5.71,
       "scored_by": 123,
       "rank": 131,
-      "popularity": 16592,
+      "popularity": 16593,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1328,7 +1328,7 @@
       "score": 5.64,
       "scored_by": 300,
       "rank": 133,
-      "popularity": 11584,
+      "popularity": 11580,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1388,7 +1388,7 @@
       "score": null,
       "scored_by": 20,
       "rank": 139,
-      "popularity": 21683,
+      "popularity": 21684,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1418,7 +1418,7 @@
       "score": null,
       "scored_by": 5,
       "rank": 142,
-      "popularity": 30405,
+      "popularity": 30390,
       "status": "currently_airing",
       "episodes": 10
     },
@@ -1508,7 +1508,7 @@
       "score": null,
       "scored_by": 6,
       "rank": 151,
-      "popularity": 29423,
+      "popularity": 29424,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1516,9 +1516,9 @@
       "mal_id": 65169,
       "title": "Dark Summoner to Dekiteiru Mini Anime Gekijou",
       "score": null,
-      "scored_by": 48,
+      "scored_by": 49,
       "rank": 152,
-      "popularity": 18756,
+      "popularity": 18699,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -1558,7 +1558,7 @@
       "score": null,
       "scored_by": 15,
       "rank": 156,
-      "popularity": 19766,
+      "popularity": 19755,
       "status": "currently_airing",
       "episodes": 4
     },
@@ -1608,7 +1608,7 @@
       "score": null,
       "scored_by": 43,
       "rank": 161,
-      "popularity": 22657,
+      "popularity": 22658,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1668,7 +1668,7 @@
       "score": null,
       "scored_by": 30,
       "rank": 167,
-      "popularity": 23250,
+      "popularity": 23251,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1678,7 +1678,7 @@
       "score": null,
       "scored_by": 18,
       "rank": 168,
-      "popularity": 26911,
+      "popularity": 26853,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1698,7 +1698,7 @@
       "score": null,
       "scored_by": 31,
       "rank": 170,
-      "popularity": 20398,
+      "popularity": 20397,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1718,7 +1718,7 @@
       "score": null,
       "scored_by": 9,
       "rank": 172,
-      "popularity": 26003,
+      "popularity": 26004,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1788,7 +1788,7 @@
       "score": null,
       "scored_by": 63,
       "rank": 179,
-      "popularity": 19755,
+      "popularity": 19756,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1818,7 +1818,7 @@
       "score": null,
       "scored_by": 52,
       "rank": 182,
-      "popularity": 21404,
+      "popularity": 21386,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -1868,7 +1868,7 @@
       "score": null,
       "scored_by": 20,
       "rank": 187,
-      "popularity": 25769,
+      "popularity": 25713,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1888,7 +1888,7 @@
       "score": null,
       "scored_by": 11,
       "rank": 189,
-      "popularity": 25966,
+      "popularity": 25928,
       "status": "currently_airing",
       "episodes": 14
     },
@@ -1898,7 +1898,7 @@
       "score": null,
       "scored_by": 10,
       "rank": 190,
-      "popularity": 29865,
+      "popularity": 29679,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1908,7 +1908,7 @@
       "score": null,
       "scored_by": 33,
       "rank": 191,
-      "popularity": 22957,
+      "popularity": 22959,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1918,7 +1918,7 @@
       "score": null,
       "scored_by": 75,
       "rank": 192,
-      "popularity": 17600,
+      "popularity": 17601,
       "status": "currently_airing",
       "episodes": 24
     },
@@ -1948,7 +1948,7 @@
       "score": null,
       "scored_by": 65,
       "rank": 195,
-      "popularity": 18230,
+      "popularity": 18210,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -1968,7 +1968,7 @@
       "score": null,
       "scored_by": 8,
       "rank": 197,
-      "popularity": 30101,
+      "popularity": 30102,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -1998,7 +1998,7 @@
       "score": null,
       "scored_by": 94,
       "rank": 200,
-      "popularity": 16716,
+      "popularity": 16717,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2078,7 +2078,7 @@
       "score": null,
       "scored_by": 16,
       "rank": 208,
-      "popularity": 23908,
+      "popularity": 23909,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2118,7 +2118,7 @@
       "score": null,
       "scored_by": 43,
       "rank": 212,
-      "popularity": 19547,
+      "popularity": 19548,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2128,7 +2128,7 @@
       "score": null,
       "scored_by": 12,
       "rank": 213,
-      "popularity": 25174,
+      "popularity": 25175,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2138,7 +2138,7 @@
       "score": null,
       "scored_by": 32,
       "rank": 214,
-      "popularity": 21149,
+      "popularity": 21121,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2158,7 +2158,7 @@
       "score": null,
       "scored_by": 4,
       "rank": 216,
-      "popularity": 24512,
+      "popularity": 24513,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2168,7 +2168,7 @@
       "score": null,
       "scored_by": 31,
       "rank": 217,
-      "popularity": 22404,
+      "popularity": 22405,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2198,7 +2198,7 @@
       "score": null,
       "scored_by": 17,
       "rank": 220,
-      "popularity": 24669,
+      "popularity": 24670,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2218,7 +2218,7 @@
       "score": null,
       "scored_by": 28,
       "rank": 222,
-      "popularity": 22224,
+      "popularity": 22210,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2278,7 +2278,7 @@
       "score": null,
       "scored_by": 39,
       "rank": 228,
-      "popularity": 19992,
+      "popularity": 20004,
       "status": "currently_airing",
       "episodes": 26
     },
@@ -2288,7 +2288,7 @@
       "score": null,
       "scored_by": 9,
       "rank": 229,
-      "popularity": 30476,
+      "popularity": 30478,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2298,7 +2298,7 @@
       "score": null,
       "scored_by": 39,
       "rank": 230,
-      "popularity": 22848,
+      "popularity": 22849,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2308,7 +2308,7 @@
       "score": null,
       "scored_by": 12,
       "rank": 231,
-      "popularity": 25210,
+      "popularity": 25211,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2328,7 +2328,7 @@
       "score": null,
       "scored_by": 11,
       "rank": 233,
-      "popularity": 25936,
+      "popularity": 25937,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2348,7 +2348,7 @@
       "score": null,
       "scored_by": 3,
       "rank": 235,
-      "popularity": 30070,
+      "popularity": 30071,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -2438,7 +2438,7 @@
       "score": null,
       "scored_by": 17,
       "rank": 244,
-      "popularity": 20863,
+      "popularity": 20862,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2468,7 +2468,7 @@
       "score": null,
       "scored_by": 35,
       "rank": 247,
-      "popularity": 24520,
+      "popularity": 24521,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2488,7 +2488,7 @@
       "score": null,
       "scored_by": 38,
       "rank": 249,
-      "popularity": 23485,
+      "popularity": 23486,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2498,7 +2498,7 @@
       "score": null,
       "scored_by": 51,
       "rank": 250,
-      "popularity": 21124,
+      "popularity": 21125,
       "status": "currently_airing",
       "episodes": 40
     },
@@ -2608,7 +2608,7 @@
       "score": null,
       "scored_by": 6,
       "rank": 261,
-      "popularity": 24273,
+      "popularity": 24274,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2618,7 +2618,7 @@
       "score": null,
       "scored_by": 20,
       "rank": 262,
-      "popularity": 23753,
+      "popularity": 23754,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2668,7 +2668,7 @@
       "score": null,
       "scored_by": 29,
       "rank": 267,
-      "popularity": 22971,
+      "popularity": 22973,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2698,7 +2698,7 @@
       "score": null,
       "scored_by": 10,
       "rank": 270,
-      "popularity": 30278,
+      "popularity": 30279,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2768,7 +2768,7 @@
       "score": null,
       "scored_by": 12,
       "rank": 277,
-      "popularity": 22947,
+      "popularity": 22949,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2778,7 +2778,7 @@
       "score": null,
       "scored_by": 25,
       "rank": 278,
-      "popularity": 21682,
+      "popularity": 21656,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2798,7 +2798,7 @@
       "score": null,
       "scored_by": 24,
       "rank": 280,
-      "popularity": 22834,
+      "popularity": 22835,
       "status": "currently_airing",
       "episodes": 40
     },
@@ -2828,7 +2828,7 @@
       "score": 8.18,
       "scored_by": 2246,
       "rank": 283,
-      "popularity": 6553,
+      "popularity": 6554,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -2878,7 +2878,7 @@
       "score": 6.79,
       "scored_by": 164,
       "rank": 288,
-      "popularity": 16722,
+      "popularity": 16723,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3048,7 +3048,7 @@
       "score": null,
       "scored_by": 26,
       "rank": 305,
-      "popularity": 29926,
+      "popularity": 29927,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3118,7 +3118,7 @@
       "score": null,
       "scored_by": 95,
       "rank": 312,
-      "popularity": 22718,
+      "popularity": 22719,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3198,15 +3198,15 @@
       "score": 7.34,
       "scored_by": 2428,
       "rank": 320,
-      "popularity": 8088,
+      "popularity": 8087,
       "status": "currently_airing",
       "episodes": 0
     },
     {
       "mal_id": 64070,
       "title": "Furachi",
-      "score": 7.3,
-      "scored_by": 523,
+      "score": 7.26,
+      "scored_by": 524,
       "rank": 321,
       "popularity": 13319,
       "status": "currently_airing",
@@ -3258,7 +3258,7 @@
       "score": 7.07,
       "scored_by": 194,
       "rank": 326,
-      "popularity": 15670,
+      "popularity": 15663,
       "status": "currently_airing",
       "episodes": 3
     },
@@ -3278,7 +3278,7 @@
       "score": 6.92,
       "scored_by": 1730,
       "rank": 328,
-      "popularity": 6072,
+      "popularity": 6071,
       "status": "currently_airing",
       "episodes": 12
     },
@@ -3288,7 +3288,7 @@
       "score": 6.91,
       "scored_by": 292,
       "rank": 329,
-      "popularity": 14364,
+      "popularity": 14360,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3338,7 +3338,7 @@
       "score": 6.61,
       "scored_by": 498,
       "rank": 334,
-      "popularity": 13524,
+      "popularity": 13525,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3366,7 +3366,7 @@
       "mal_id": 64298,
       "title": "Hitozukiai ga Nigate na Miboujin no Yukionna-san to Noroi no Yubiwa",
       "score": 6.5,
-      "scored_by": 474,
+      "scored_by": 476,
       "rank": 337,
       "popularity": 8898,
       "status": "currently_airing",
@@ -3448,7 +3448,7 @@
       "score": 6.26,
       "scored_by": 301,
       "rank": 345,
-      "popularity": 14259,
+      "popularity": 14253,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3476,7 +3476,7 @@
       "mal_id": 63810,
       "title": "Paihame Kazoku",
       "score": 6.21,
-      "scored_by": 417,
+      "scored_by": 418,
       "rank": 348,
       "popularity": 13565,
       "status": "currently_airing",
@@ -3518,7 +3518,7 @@
       "score": 6.15,
       "scored_by": 224,
       "rank": 352,
-      "popularity": 15792,
+      "popularity": 15789,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3588,7 +3588,7 @@
       "score": 5.96,
       "scored_by": 946,
       "rank": 359,
-      "popularity": 10980,
+      "popularity": 10981,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3626,9 +3626,9 @@
       "mal_id": 63026,
       "title": "Kenki Virgo",
       "score": 5.83,
-      "scored_by": 385,
+      "scored_by": 386,
       "rank": 363,
-      "popularity": 13556,
+      "popularity": 13553,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3638,7 +3638,7 @@
       "score": 5.73,
       "scored_by": 552,
       "rank": 364,
-      "popularity": 9548,
+      "popularity": 9547,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3656,7 +3656,7 @@
       "mal_id": 64131,
       "title": "Kanojo no Tomodachi",
       "score": 5.71,
-      "scored_by": 812,
+      "scored_by": 813,
       "rank": 366,
       "popularity": 7922,
       "status": "currently_airing",
@@ -3665,10 +3665,10 @@
     {
       "mal_id": 64297,
       "title": "Muchuu no Tou",
-      "score": 5.67,
-      "scored_by": 247,
+      "score": 5.66,
+      "scored_by": 248,
       "rank": 367,
-      "popularity": 16035,
+      "popularity": 16027,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3705,10 +3705,10 @@
     {
       "mal_id": 63084,
       "title": "Seikou Senki Pony Celes",
-      "score": 5.43,
-      "scored_by": 274,
+      "score": 5.44,
+      "scored_by": 275,
       "rank": 371,
-      "popularity": 14592,
+      "popularity": 14590,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3716,9 +3716,9 @@
       "mal_id": 64404,
       "title": "Muramata-san no Aijou",
       "score": null,
-      "scored_by": 99,
+      "scored_by": 100,
       "rank": 372,
-      "popularity": 14656,
+      "popularity": 14648,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3728,7 +3728,7 @@
       "score": null,
       "scored_by": 76,
       "rank": 373,
-      "popularity": 16950,
+      "popularity": 16948,
       "status": "currently_airing",
       "episodes": 0
     },
@@ -3746,7 +3746,7 @@
       "mal_id": 61990,
       "title": "Cyberpunk: Edgerunners 2",
       "score": null,
-      "scored_by": 2,
+      "scored_by": 3,
       "rank": 2,
       "popularity": 1964,
       "status": "not_yet_aired",
@@ -3756,9 +3756,9 @@
       "mal_id": 57584,
       "title": "Kage no Jitsuryokusha ni Naritakute! Movie: Zankyou-hen",
       "score": null,
-      "scored_by": 5,
+      "scored_by": 1,
       "rank": 3,
-      "popularity": 2101,
+      "popularity": 2100,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -3786,7 +3786,7 @@
       "mal_id": 63816,
       "title": "Sousou no Frieren: Ougonkyou-hen",
       "score": null,
-      "scored_by": 3,
+      "scored_by": 0,
       "rank": 6,
       "popularity": 2211,
       "status": "not_yet_aired",
@@ -3846,7 +3846,7 @@
       "mal_id": 59139,
       "title": "Tsuki ga Michibiku Isekai Douchuu 3rd Season",
       "score": null,
-      "scored_by": 2,
+      "scored_by": 1,
       "rank": 12,
       "popularity": 2809,
       "status": "not_yet_aired",
@@ -3856,7 +3856,7 @@
       "mal_id": 61338,
       "title": "Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su 3rd Season",
       "score": null,
-      "scored_by": 0,
+      "scored_by": 1,
       "rank": 13,
       "popularity": 2841,
       "status": "not_yet_aired",
@@ -3886,7 +3886,7 @@
       "mal_id": 63794,
       "title": "[Oshi no Ko] 4th Season",
       "score": null,
-      "scored_by": 2,
+      "scored_by": 1,
       "rank": 16,
       "popularity": 2931,
       "status": "not_yet_aired",
@@ -4006,9 +4006,9 @@
       "mal_id": 63820,
       "title": "Yuusha-kei ni Shosu: Choubatsu Yuusha 9004-tai Keimu Kiroku 2nd Season",
       "score": null,
-      "scored_by": 2,
+      "scored_by": 0,
       "rank": 28,
-      "popularity": 3666,
+      "popularity": 3665,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4056,7 +4056,7 @@
       "mal_id": 62564,
       "title": "Tate no Yuusha no Nariagari Season 5",
       "score": null,
-      "scored_by": 2,
+      "scored_by": 1,
       "rank": 33,
       "popularity": 3827,
       "status": "not_yet_aired",
@@ -4068,7 +4068,7 @@
       "score": null,
       "scored_by": 1,
       "rank": 34,
-      "popularity": 3832,
+      "popularity": 3831,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -4108,7 +4108,7 @@
       "score": null,
       "scored_by": 2,
       "rank": 38,
-      "popularity": 3960,
+      "popularity": 3961,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4126,7 +4126,7 @@
       "mal_id": 54440,
       "title": "Lycoris Recoil (Shinsaku Animation)",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 40,
       "popularity": 4021,
       "status": "not_yet_aired",
@@ -4158,7 +4158,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 43,
-      "popularity": 4092,
+      "popularity": 4093,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -4288,7 +4288,7 @@
       "score": null,
       "scored_by": 1,
       "rank": 56,
-      "popularity": 4568,
+      "popularity": 4567,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4388,7 +4388,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 66,
-      "popularity": 5165,
+      "popularity": 5163,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4428,7 +4428,7 @@
       "score": null,
       "scored_by": 1,
       "rank": 70,
-      "popularity": 5339,
+      "popularity": 5337,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4448,7 +4448,7 @@
       "score": null,
       "scored_by": 2,
       "rank": 72,
-      "popularity": 5371,
+      "popularity": 5372,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4493,18 +4493,18 @@
       "episodes": 0
     },
     {
-      "mal_id": 64290,
-      "title": "Dorohedoro Season 3",
+      "mal_id": 62989,
+      "title": "Kakunaru Ue wa",
       "score": null,
       "scored_by": 0,
       "rank": 77,
-      "popularity": 5480,
+      "popularity": 5471,
       "status": "not_yet_aired",
       "episodes": 0
     },
     {
-      "mal_id": 64553,
-      "title": "Lv2 kara Cheat datta Motoyuusha Kouho no Mattari Isekai Life 2nd Season",
+      "mal_id": 64290,
+      "title": "Dorohedoro Season 3",
       "score": null,
       "scored_by": 0,
       "rank": 78,
@@ -4513,10 +4513,10 @@
       "episodes": 0
     },
     {
-      "mal_id": 62989,
-      "title": "Kakunaru Ue wa",
+      "mal_id": 64553,
+      "title": "Lv2 kara Cheat datta Motoyuusha Kouho no Mattari Isekai Life 2nd Season",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 79,
       "popularity": 5482,
       "status": "not_yet_aired",
@@ -4648,7 +4648,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 92,
-      "popularity": 5791,
+      "popularity": 5788,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4708,7 +4708,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 98,
-      "popularity": 6014,
+      "popularity": 6012,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4776,9 +4776,9 @@
       "mal_id": 63789,
       "title": "Mayonaka Heart Tune 2nd Season",
       "score": null,
-      "scored_by": 2,
+      "scored_by": 0,
       "rank": 105,
-      "popularity": 6101,
+      "popularity": 6098,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4786,7 +4786,7 @@
       "mal_id": 49703,
       "title": "Fate/kaleid liner Prisma\u2606Illya: Finale",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 106,
       "popularity": 6199,
       "status": "not_yet_aired",
@@ -4798,7 +4798,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 107,
-      "popularity": 6281,
+      "popularity": 6277,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4868,7 +4868,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 114,
-      "popularity": 6536,
+      "popularity": 6534,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4928,7 +4928,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 120,
-      "popularity": 6771,
+      "popularity": 6767,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -4988,7 +4988,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 126,
-      "popularity": 6905,
+      "popularity": 6904,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5008,7 +5008,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 128,
-      "popularity": 6934,
+      "popularity": 6935,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -5016,9 +5016,9 @@
       "mal_id": 65103,
       "title": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen - Kizokuin no Toshokan wo Sukuitai!",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 129,
-      "popularity": 6936,
+      "popularity": 6910,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5038,7 +5038,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 131,
-      "popularity": 6990,
+      "popularity": 6991,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5088,7 +5088,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 136,
-      "popularity": 7115,
+      "popularity": 7116,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -5178,7 +5178,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 145,
-      "popularity": 7408,
+      "popularity": 7395,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5208,7 +5208,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 148,
-      "popularity": 7496,
+      "popularity": 7494,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5228,7 +5228,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 150,
-      "popularity": 7658,
+      "popularity": 7647,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -5343,24 +5343,24 @@
       "episodes": 0
     },
     {
+      "mal_id": 65023,
+      "title": "Tougen Anki: Nikko Kegon no Taki-hen Part 2",
+      "score": null,
+      "scored_by": 0,
+      "rank": 162,
+      "popularity": 8541,
+      "status": "not_yet_aired",
+      "episodes": 12
+    },
+    {
       "mal_id": 60275,
       "title": "Boukyaku Battery (TV) 2nd Season",
       "score": null,
       "scored_by": 0,
-      "rank": 162,
-      "popularity": 8543,
+      "rank": 163,
+      "popularity": 8545,
       "status": "not_yet_aired",
       "episodes": 0
-    },
-    {
-      "mal_id": 65023,
-      "title": "Tougen Anki: Nikko Kegon no Taki-hen Part 2",
-      "score": null,
-      "scored_by": 2,
-      "rank": 163,
-      "popularity": 8557,
-      "status": "not_yet_aired",
-      "episodes": 12
     },
     {
       "mal_id": 64374,
@@ -5443,22 +5443,22 @@
       "episodes": 0
     },
     {
-      "mal_id": 63476,
-      "title": "Odebu Akujo ni Tensei shitara, Nazeka Last Boss Oujisama ni Shuuchaku sareteimasu",
+      "mal_id": 61135,
+      "title": "Giant Ojousama",
       "score": null,
-      "scored_by": 0,
+      "scored_by": 1,
       "rank": 172,
       "popularity": 9072,
       "status": "not_yet_aired",
       "episodes": 0
     },
     {
-      "mal_id": 61135,
-      "title": "Giant Ojousama",
+      "mal_id": 63476,
+      "title": "Odebu Akujo ni Tensei shitara, Nazeka Last Boss Oujisama ni Shuuchaku sareteimasu",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 173,
-      "popularity": 9091,
+      "popularity": 9073,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5488,7 +5488,7 @@
       "score": null,
       "scored_by": 1,
       "rank": 176,
-      "popularity": 9149,
+      "popularity": 9145,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5498,7 +5498,7 @@
       "score": null,
       "scored_by": 14,
       "rank": 177,
-      "popularity": 9195,
+      "popularity": 9189,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5598,7 +5598,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 187,
-      "popularity": 9521,
+      "popularity": 9515,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5663,20 +5663,20 @@
       "episodes": 0
     },
     {
-      "mal_id": 62978,
-      "title": "Majutsu wo Kiwamete Tabi ni Deta Tensei Elf, Moteamashita Jumyou de Ikeru Densetsu to Naru",
-      "score": null,
-      "scored_by": 1,
-      "rank": 194,
-      "popularity": 9778,
-      "status": "not_yet_aired",
-      "episodes": 0
-    },
-    {
       "mal_id": 65144,
       "title": "The Boxer",
       "score": null,
       "scored_by": 0,
+      "rank": 194,
+      "popularity": 9756,
+      "status": "not_yet_aired",
+      "episodes": 0
+    },
+    {
+      "mal_id": 62978,
+      "title": "Majutsu wo Kiwamete Tabi ni Deta Tensei Elf, Moteamashita Jumyou de Ikeru Densetsu to Naru",
+      "score": null,
+      "scored_by": 1,
       "rank": 195,
       "popularity": 9779,
       "status": "not_yet_aired",
@@ -5728,7 +5728,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 200,
-      "popularity": 10059,
+      "popularity": 10049,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5776,7 +5776,7 @@
       "mal_id": 61756,
       "title": "Gacha wo Mawashite Nakama wo Fuyasu: Saikyou no Bishoujo Gundan wo Tsukuriagero",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 205,
       "popularity": 10201,
       "status": "not_yet_aired",
@@ -5818,7 +5818,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 209,
-      "popularity": 10498,
+      "popularity": 10499,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -5898,7 +5898,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 217,
-      "popularity": 10789,
+      "popularity": 10790,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5908,7 +5908,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 218,
-      "popularity": 10814,
+      "popularity": 10805,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5938,7 +5938,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 221,
-      "popularity": 11118,
+      "popularity": 11119,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -5968,7 +5968,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 224,
-      "popularity": 11255,
+      "popularity": 11253,
       "status": "not_yet_aired",
       "episodes": 2
     },
@@ -5978,7 +5978,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 225,
-      "popularity": 11281,
+      "popularity": 11272,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -5998,7 +5998,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 227,
-      "popularity": 11302,
+      "popularity": 11300,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6008,7 +6008,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 228,
-      "popularity": 11318,
+      "popularity": 11313,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6063,12 +6063,22 @@
       "episodes": 0
     },
     {
+      "mal_id": 64599,
+      "title": "Noa-senpai wa Tomodachi.",
+      "score": null,
+      "scored_by": 0,
+      "rank": 234,
+      "popularity": 11483,
+      "status": "not_yet_aired",
+      "episodes": 0
+    },
+    {
       "mal_id": 61754,
       "title": "S-Rank Party kara Kaiko sareta \"Jugushi\"",
       "score": null,
       "scored_by": 0,
-      "rank": 234,
-      "popularity": 11462,
+      "rank": 235,
+      "popularity": 11463,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6077,18 +6087,8 @@
       "title": "Akuyaku no Ending wa Shi nomi",
       "score": null,
       "scored_by": 1,
-      "rank": 235,
-      "popularity": 11474,
-      "status": "not_yet_aired",
-      "episodes": 0
-    },
-    {
-      "mal_id": 64599,
-      "title": "Noa-senpai wa Tomodachi.",
-      "score": null,
-      "scored_by": 0,
       "rank": 236,
-      "popularity": 11483,
+      "popularity": 11475,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6226,7 +6226,7 @@
       "mal_id": 60160,
       "title": "Love Live! Nijigasaki Gakuen School Idol Doukoukai: Kanketsu-hen Saishuushou",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 250,
       "popularity": 11824,
       "status": "not_yet_aired",
@@ -6268,7 +6268,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 254,
-      "popularity": 11872,
+      "popularity": 11873,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6398,7 +6398,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 267,
-      "popularity": 12485,
+      "popularity": 12486,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6438,7 +6438,7 @@
       "score": null,
       "scored_by": 1,
       "rank": 271,
-      "popularity": 12682,
+      "popularity": 12681,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6468,7 +6468,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 274,
-      "popularity": 12806,
+      "popularity": 12807,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -6483,18 +6483,18 @@
       "episodes": 0
     },
     {
-      "mal_id": 64665,
-      "title": "Shin no Seijo de Aru Watashi wa Tsuihou saremashita. Dakara Kono Kuni wa Mou Owari desu",
+      "mal_id": 64892,
+      "title": "8-gatsu 31-nichi no Long Summer",
       "score": null,
       "scored_by": 0,
       "rank": 276,
-      "popularity": 12888,
+      "popularity": 12887,
       "status": "not_yet_aired",
       "episodes": 0
     },
     {
-      "mal_id": 64892,
-      "title": "8-gatsu 31-nichi no Long Summer",
+      "mal_id": 64665,
+      "title": "Shin no Seijo de Aru Watashi wa Tsuihou saremashita. Dakara Kono Kuni wa Mou Owari desu",
       "score": null,
       "scored_by": 0,
       "rank": 277,
@@ -6508,7 +6508,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 278,
-      "popularity": 12912,
+      "popularity": 12909,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6553,22 +6553,22 @@
       "episodes": 0
     },
     {
-      "mal_id": 60566,
-      "title": "Nan Hong",
-      "score": null,
-      "scored_by": 0,
-      "rank": 283,
-      "popularity": 13157,
-      "status": "not_yet_aired",
-      "episodes": 0
-    },
-    {
       "mal_id": 65145,
       "title": "Saikon Shounin wo Youkyuu Shimasu",
       "score": null,
       "scored_by": 0,
+      "rank": 283,
+      "popularity": 13139,
+      "status": "not_yet_aired",
+      "episodes": 0
+    },
+    {
+      "mal_id": 60566,
+      "title": "Nan Hong",
+      "score": null,
+      "scored_by": 0,
       "rank": 284,
-      "popularity": 13170,
+      "popularity": 13158,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6598,7 +6598,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 287,
-      "popularity": 13281,
+      "popularity": 13275,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6618,7 +6618,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 289,
-      "popularity": 13334,
+      "popularity": 13329,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -6733,22 +6733,22 @@
       "episodes": 0
     },
     {
-      "mal_id": 65180,
-      "title": "Nue no Onmyouji",
+      "mal_id": 64608,
+      "title": "Toratsugumi: Tsugumi Project",
       "score": null,
-      "scored_by": 1,
+      "scored_by": 0,
       "rank": 301,
       "popularity": 13819,
       "status": "not_yet_aired",
       "episodes": 0
     },
     {
-      "mal_id": 64608,
-      "title": "Toratsugumi: Tsugumi Project",
+      "mal_id": 65180,
+      "title": "Nue no Onmyouji",
       "score": null,
-      "scored_by": 0,
+      "scored_by": 1,
       "rank": 302,
-      "popularity": 13826,
+      "popularity": 13820,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6898,7 +6898,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 317,
-      "popularity": 14360,
+      "popularity": 14361,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6958,7 +6958,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 323,
-      "popularity": 14952,
+      "popularity": 14945,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -6968,7 +6968,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 324,
-      "popularity": 14968,
+      "popularity": 14970,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -7008,7 +7008,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 328,
-      "popularity": 15177,
+      "popularity": 15171,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7038,7 +7038,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 331,
-      "popularity": 15310,
+      "popularity": 15306,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7088,7 +7088,7 @@
       "score": null,
       "scored_by": 5,
       "rank": 336,
-      "popularity": 15583,
+      "popularity": 15578,
       "status": "not_yet_aired",
       "episodes": 3
     },
@@ -7118,7 +7118,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 339,
-      "popularity": 15789,
+      "popularity": 15790,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7268,7 +7268,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 354,
-      "popularity": 16310,
+      "popularity": 16311,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7303,22 +7303,22 @@
       "episodes": 0
     },
     {
-      "mal_id": 64695,
-      "title": "Odoru Sennen Kazoku",
-      "score": null,
-      "scored_by": 0,
-      "rank": 358,
-      "popularity": 16384,
-      "status": "not_yet_aired",
-      "episodes": 0
-    },
-    {
       "mal_id": 64448,
       "title": "Doupo Cangqiong Movie: Shuang Di Zhi Zhan",
       "score": null,
       "scored_by": 0,
+      "rank": 358,
+      "popularity": 16376,
+      "status": "not_yet_aired",
+      "episodes": 0
+    },
+    {
+      "mal_id": 64695,
+      "title": "Odoru Sennen Kazoku",
+      "score": null,
+      "scored_by": 0,
       "rank": 359,
-      "popularity": 16389,
+      "popularity": 16385,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7378,7 +7378,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 365,
-      "popularity": 16616,
+      "popularity": 16617,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7388,17 +7388,7 @@
       "score": null,
       "scored_by": 1,
       "rank": 366,
-      "popularity": 16662,
-      "status": "not_yet_aired",
-      "episodes": 0
-    },
-    {
-      "mal_id": 64466,
-      "title": "Nabe ni Tama wo Ukenagara",
-      "score": null,
-      "scored_by": 0,
-      "rank": 367,
-      "popularity": 16693,
+      "popularity": 16663,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7407,8 +7397,18 @@
       "title": "Funsou deshitara Hatta made",
       "score": null,
       "scored_by": 0,
+      "rank": 367,
+      "popularity": 16693,
+      "status": "not_yet_aired",
+      "episodes": 0
+    },
+    {
+      "mal_id": 64466,
+      "title": "Nabe ni Tama wo Ukenagara",
+      "score": null,
+      "scored_by": 0,
       "rank": 368,
-      "popularity": 16711,
+      "popularity": 16695,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7448,7 +7448,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 372,
-      "popularity": 16871,
+      "popularity": 16872,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -7458,7 +7458,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 373,
-      "popularity": 17070,
+      "popularity": 17056,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7528,7 +7528,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 380,
-      "popularity": 17601,
+      "popularity": 17602,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7588,7 +7588,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 386,
-      "popularity": 18374,
+      "popularity": 18375,
       "status": "not_yet_aired",
       "episodes": 26
     },
@@ -7658,7 +7658,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 393,
-      "popularity": 18705,
+      "popularity": 18706,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7668,7 +7668,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 394,
-      "popularity": 18723,
+      "popularity": 18724,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7678,7 +7678,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 395,
-      "popularity": 18753,
+      "popularity": 18754,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7748,7 +7748,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 402,
-      "popularity": 19002,
+      "popularity": 18984,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7778,7 +7778,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 405,
-      "popularity": 19221,
+      "popularity": 19210,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -7788,7 +7788,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 406,
-      "popularity": 19510,
+      "popularity": 19472,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -7808,7 +7808,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 408,
-      "popularity": 19725,
+      "popularity": 19726,
       "status": "not_yet_aired",
       "episodes": 1
     },
@@ -7858,7 +7858,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 413,
-      "popularity": 20057,
+      "popularity": 20046,
       "status": "not_yet_aired",
       "episodes": 6
     },
@@ -7998,7 +7998,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 427,
-      "popularity": 21389,
+      "popularity": 21390,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8028,7 +8028,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 430,
-      "popularity": 21586,
+      "popularity": 21587,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8158,17 +8158,27 @@
       "score": null,
       "scored_by": 0,
       "rank": 443,
-      "popularity": 22396,
+      "popularity": 22397,
       "status": "not_yet_aired",
       "episodes": 0
+    },
+    {
+      "mal_id": 65209,
+      "title": "Wan Sheng Jie: Gubao de Mimi",
+      "score": null,
+      "scored_by": 0,
+      "rank": 444,
+      "popularity": 22833,
+      "status": "not_yet_aired",
+      "episodes": 3
     },
     {
       "mal_id": 62721,
       "title": "Lun Hui Leyuan",
       "score": null,
       "scored_by": 0,
-      "rank": 444,
-      "popularity": 22592,
+      "rank": 445,
+      "popularity": 22593,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8177,8 +8187,8 @@
       "title": "Nian Fanchen",
       "score": null,
       "scored_by": 0,
-      "rank": 445,
-      "popularity": 22596,
+      "rank": 446,
+      "popularity": 22597,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8187,8 +8197,8 @@
       "title": "Wakareru Tame ni Irojikake shitemita",
       "score": null,
       "scored_by": 0,
-      "rank": 446,
-      "popularity": 22604,
+      "rank": 447,
+      "popularity": 22605,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8197,8 +8207,8 @@
       "title": "Wangzhe Rongyao: Rongyao Zhi Zhang - Baozang Pian",
       "score": null,
       "scored_by": 0,
-      "rank": 447,
-      "popularity": 22639,
+      "rank": 448,
+      "popularity": 22641,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8207,8 +8217,8 @@
       "title": "Chao Neng Fuke Jing",
       "score": null,
       "scored_by": 0,
-      "rank": 448,
-      "popularity": 22642,
+      "rank": 449,
+      "popularity": 22644,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8217,7 +8227,7 @@
       "title": "Xing Yuan Zhi Jing",
       "score": null,
       "scored_by": 0,
-      "rank": 449,
+      "rank": 450,
       "popularity": 22675,
       "status": "not_yet_aired",
       "episodes": 0
@@ -8227,8 +8237,8 @@
       "title": "Tao Yu Moshi Zhi Shu",
       "score": null,
       "scored_by": 0,
-      "rank": 450,
-      "popularity": 22696,
+      "rank": 451,
+      "popularity": 22697,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8237,8 +8247,8 @@
       "title": "Xue Zhong Han Dao Xing",
       "score": null,
       "scored_by": 0,
-      "rank": 451,
-      "popularity": 22972,
+      "rank": 452,
+      "popularity": 22974,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8247,8 +8257,8 @@
       "title": "Shaonian Ge Xing: Nanming Li Huo",
       "score": null,
       "scored_by": 0,
-      "rank": 452,
-      "popularity": 23048,
+      "rank": 453,
+      "popularity": 23049,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8257,20 +8267,10 @@
       "title": "Zi Heian Zhong Zou Lai",
       "score": null,
       "scored_by": 0,
-      "rank": 453,
-      "popularity": 23115,
+      "rank": 454,
+      "popularity": 23116,
       "status": "not_yet_aired",
       "episodes": 0
-    },
-    {
-      "mal_id": 65209,
-      "title": "Wan Sheng Jie: Gubao de Mimi",
-      "score": null,
-      "scored_by": 0,
-      "rank": 454,
-      "popularity": 23164,
-      "status": "not_yet_aired",
-      "episodes": 3
     },
     {
       "mal_id": 62722,
@@ -8398,7 +8398,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 467,
-      "popularity": 23889,
+      "popularity": 23890,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8408,7 +8408,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 468,
-      "popularity": 23900,
+      "popularity": 23902,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8448,7 +8448,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 472,
-      "popularity": 24270,
+      "popularity": 24271,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8478,7 +8478,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 475,
-      "popularity": 24461,
+      "popularity": 24462,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8488,7 +8488,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 476,
-      "popularity": 24507,
+      "popularity": 24508,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8508,7 +8508,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 478,
-      "popularity": 24654,
+      "popularity": 24655,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8548,7 +8548,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 482,
-      "popularity": 24808,
+      "popularity": 24809,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8558,7 +8558,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 483,
-      "popularity": 24831,
+      "popularity": 24806,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8578,7 +8578,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 485,
-      "popularity": 25132,
+      "popularity": 25133,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8588,7 +8588,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 486,
-      "popularity": 25217,
+      "popularity": 25218,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8618,7 +8618,17 @@
       "score": null,
       "scored_by": 0,
       "rank": 489,
-      "popularity": 25394,
+      "popularity": 25395,
+      "status": "not_yet_aired",
+      "episodes": 0
+    },
+    {
+      "mal_id": 65117,
+      "title": "Anemone (2027)",
+      "score": null,
+      "scored_by": 0,
+      "rank": 490,
+      "popularity": 25569,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8627,7 +8637,7 @@
       "title": "Bie Jiao Wo Emo",
       "score": null,
       "scored_by": 0,
-      "rank": 490,
+      "rank": 491,
       "popularity": 25612,
       "status": "not_yet_aired",
       "episodes": 0
@@ -8637,7 +8647,7 @@
       "title": "Tuer Ni Wudile Xiashan Qu Ba",
       "score": null,
       "scored_by": 0,
-      "rank": 491,
+      "rank": 492,
       "popularity": 25645,
       "status": "not_yet_aired",
       "episodes": 0
@@ -8647,18 +8657,8 @@
       "title": "Wo Bushi Xi Shen",
       "score": null,
       "scored_by": 0,
-      "rank": 492,
-      "popularity": 25648,
-      "status": "not_yet_aired",
-      "episodes": 0
-    },
-    {
-      "mal_id": 65117,
-      "title": "Anemone (2027)",
-      "score": null,
-      "scored_by": 0,
       "rank": 493,
-      "popularity": 25607,
+      "popularity": 25648,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8678,7 +8678,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 495,
-      "popularity": 25714,
+      "popularity": 25715,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8688,7 +8688,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 496,
-      "popularity": 25749,
+      "popularity": 25750,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8718,7 +8718,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 499,
-      "popularity": 25942,
+      "popularity": 25943,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8728,7 +8728,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 500,
-      "popularity": 25959,
+      "popularity": 25960,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8738,7 +8738,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 501,
-      "popularity": 26014,
+      "popularity": 26015,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8868,7 +8868,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 514,
-      "popularity": 26653,
+      "popularity": 26654,
       "status": "not_yet_aired",
       "episodes": 0
     },
@@ -8928,7 +8928,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 520,
-      "popularity": 29424,
+      "popularity": 29425,
       "status": "not_yet_aired",
       "episodes": 52
     },
@@ -8938,7 +8938,7 @@
       "score": null,
       "scored_by": 0,
       "rank": 521,
-      "popularity": 29724,
+      "popularity": 29725,
       "status": "not_yet_aired",
       "episodes": 0
     },
