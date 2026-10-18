@@ -1,0 +1,77 @@
+name: Sync MAL Database
+
+on:
+  schedule:
+    # Daily airing update at 06:00 UTC
+    - cron: '0 6 * * *'
+    # Weekly full rebuild on Sundays at 04:00 UTC
+    - cron: '0 4 * * 0'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Sync Mode (airing, full, both)'
+        required: true
+        default: 'airing'
+        type: choice
+        options:
+          - airing
+          - full
+          - both
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mal-db-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Determine Sync Mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 4 * * 0" ]; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+          else
+            echo "mode=airing" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run MAL Database Sync
+        env:
+          MAL_CLIENT_ID: ${{ secrets.MAL_CLIENT_ID || '18e5087eaeef557833a075a4d30d2afe' }}
+          REPO_DATA_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
+        run: |
+          python scripts/mal_db_sync.py --mode "${{ steps.mode.outputs.mode }}" --repo-url "$REPO_DATA_URL"
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add mal_catalog.db.gz manifest.json airing_delta.json
+          git commit -m "Update MAL database snapshot [skip ci]" || echo "No changes to commit"
+          git push origin main
+
+      - name: Prevent 60-day scheduled workflow pause
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow enable mal-db-sync.yml || true
