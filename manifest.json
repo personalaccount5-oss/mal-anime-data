@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "full_sync_epoch": 1795323124,
-  "daily_sync_epoch": 1795323124,
-  "total_anime_count": 31068,
+  "daily_sync_epoch": 1795356077,
+  "total_anime_count": 31070,
   "full_db_url": "https://raw.githubusercontent.com/personalaccount5-oss/mal-anime-data/main/mal_catalog.db.gz",
-  "full_db_sha256": "80fb10aa0e3dbeca2d11afd379cf605ea4b6b4eeca78820dc5bb060c313c939d",
-  "full_db_size_bytes": 15254500,
+  "full_db_sha256": "4179c56fd897783c6f699f53a062bdc1808ae722fbbd08a7f0c63a47a93ce4bb",
+  "full_db_size_bytes": 15281454,
   "airing_delta_url": "https://raw.githubusercontent.com/personalaccount5-oss/mal-anime-data/main/airing_delta.json",
-  "airing_delta_count": 0
+  "airing_delta_count": 914
 }
